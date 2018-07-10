@@ -1,24 +1,22 @@
 package com.example.tronku.book_app;
 
 public class Books {
-    private String title, author, rating, publisher, category, isbn, description, pgs, imgThumbnail, imgUrl, price;
+    private String title, author, publisher, category, isbn, description, pgs, imgUrl, pubDate;
 
     public Books(){
 
     }
 
-    public Books(String title, String author, String rating, String publisher, String category, String isbn, String description, String pgs, String imgThumbnail, String imgUrl, String price) {
+    public Books(String title, String author, String publisher, String category, String isbn, String pubDate, String description, String pgs, String imgUrl) {
         this.title = title;
         this.author = author;
-        this.rating = rating;
         this.publisher = publisher;
         this.category = category;
         this.isbn = isbn;
         this.description = description;
         this.pgs = pgs;
-        this.imgThumbnail = imgThumbnail;
         this.imgUrl = imgUrl;
-        this.price = price;
+        this.pubDate = pubDate;
     }
 
     //Getter
@@ -28,10 +26,6 @@ public class Books {
 
     public String getAuthor() {
         return author;
-    }
-
-    public String getRating() {
-        return rating;
     }
 
     public String getPublisher() {
@@ -54,17 +48,11 @@ public class Books {
         return pgs;
     }
 
-    public String getImgThumbnail() {
-        return imgThumbnail;
-    }
-
     public String getImgUrl() {
         return imgUrl;
     }
 
-    public String getPrice() {
-        return price;
-    }
+    public String getPubDate() { return pubDate; }
 
 
     //Setter
@@ -74,10 +62,6 @@ public class Books {
 
     public void setAuthor(String author) {
         this.author = author;
-    }
-
-    public void setRating(String rating) {
-        this.rating = rating;
     }
 
     public void setPublisher(String publisher) {
@@ -100,15 +84,9 @@ public class Books {
         this.pgs = pgs;
     }
 
-    public void setImgThumbnail(String imgThumbnail) {
-        this.imgThumbnail = imgThumbnail;
-    }
-
     public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
     }
 
-    public void setPrice(String price) {
-        this.price = price;
-    }
+    public void setPubDate(String pubDate) { this.pubDate = pubDate; }
 }

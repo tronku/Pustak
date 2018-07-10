@@ -114,6 +114,8 @@ public class result extends AppCompatActivity {
                         JSONObject bookItem = items.getJSONObject(i);
                         JSONObject bookInfo = bookItem.getJSONObject("volumeInfo");
                         JSONArray authors = bookInfo.getJSONArray("authors");
+                        JSONArray industryIdentifiers = bookInfo.getJSONArray("industryIdentifiers");
+                        JSONObject isbn = industryIdentifiers.getJSONObject(0);
                         JSONObject img_Urls = bookInfo.getJSONObject("imageLinks");
                         JSONArray categories = bookInfo.getJSONArray("categories");
 
@@ -122,8 +124,9 @@ public class result extends AppCompatActivity {
                         books.setPublisher(bookInfo.getString("publisher"));
                         books.setPgs(bookInfo.getString("pageCount"));
                         books.setDescription(bookInfo.getString("description"));
-                        books.setImgThumbnail(img_Urls.getString("smallThumbnail"));
                         books.setImgUrl(img_Urls.getString("thumbnail"));
+                        books.setIsbn(isbn.getString("identifier"));
+                        books.setPubDate(bookInfo.getString("publishedDate"));
 
                         //authors
                         String authorNames = "";

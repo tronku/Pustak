@@ -4,6 +4,7 @@
     android:padding="8dp"
     android:layout_marginTop="6dp"
     android:background="@android:color/white"
+    android:id="@+id/book_container"
     android:layout_height="160dp">
 
     <ImageView
@@ -14,7 +15,7 @@
         android:src="@drawable/img_load"/>
     
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="12dp"
         android:layout_marginStart="10dp"
@@ -54,30 +55,38 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12sp"
-            android:layout_marginTop="2dp"
-            android:background="@drawable/rating"
-            android:padding="2dp"
-            android:paddingEnd="4dp"
-            android:textColor="@android:color/white"
-            android:text="4/5"
-            android:drawableStart="@drawable/ic_star_good"
-            android:drawablePadding="2dp"
-            android:gravity="center_vertical"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:id="@+id/rating"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="1dp"
             android:layout_gravity="bottom"
             android:text="Publisher Name"
             android:ellipsize="end"
             android:maxLines="1"
             android:id="@+id/publisher_name"/>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="4"
+            android:layout_marginTop="2dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="ISBN: "
+                android:id="@+id/isbn"
+                android:textSize="12sp"
+                android:layout_marginTop="1dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pages: "
+                android:id="@+id/pgs"
+                android:textSize="12sp"
+                android:layout_marginTop="1dp"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 
