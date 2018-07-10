@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/books"
+            android:contentDescription="@string/book_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pustak"
+            android:textColor="@color/textcolor"
+            android:textSize="60sp"
+            android:layout_marginStart="16dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="-30dp"
+            android:paddingEnd="30dp"
+            android:hint="@string/search_book"
+            android:textSize="28sp"
+            android:id="@+id/search" />
+
+        <ImageButton
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="30dp"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="4dp"
+            style="?android:buttonBarButtonStyle"
+            android:src="@drawable/ic_arrow_search"
+            android:id="@+id/search_button"
+            android:layout_marginStart="-30dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="30dp"
+        android:text="@string/powered_by_google_books_api"
+        android:textSize="12sp"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:weightSum="3"
+        android:layout_marginTop="20dp"
+        android:id="@+id/search_type">
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/title"
+            android:layout_height="wrap_content"
+            android:text="@string/title"/>
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/author"
+            android:layout_height="wrap_content"
+            android:text="@string/author"/>
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/isbn"
+            android:layout_height="wrap_content"
+            android:text="@string/isbn"/>
+    </RadioGroup>
+
+</LinearLayout>

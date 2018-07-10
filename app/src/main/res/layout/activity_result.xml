@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".result">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/books" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_box"
+            android:hint="@string/search_book"
+            android:textSize="28sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="-18dp"
+            android:layout_gravity="bottom"/>
+
+        <ImageButton
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="50dp"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="4dp"
+            style="?android:buttonBarButtonStyle"
+            android:src="@drawable/ic_arrow_search"
+            android:id="@+id/search_button_result"
+            android:layout_marginStart="-40dp"/>
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:weightSum="3"
+        android:layout_marginTop="4dp"
+        android:id="@+id/search_type">
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/title_result"
+            android:layout_height="wrap_content"
+            android:text="@string/title"/>
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/author_result"
+            android:layout_height="wrap_content"
+            android:text="@string/author"/>
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/isbn_result"
+            android:layout_height="wrap_content"
+            android:text="@string/isbn"/>
+    </RadioGroup>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/recyclerview"/>
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Pustak</string>
+    <string name="book_icon">Book icon</string>
+    <string name="pustak">Pustak</string>
+    <string name="search_book">Search book</string>
+    <string name="powered_by_google_books_api">Powered by Google Books Api</string>
+    <string name="title">Title</string>
+    <string name="author">Author</string>
+    <string name="isbn">ISBN 13</string>
+</resources>
