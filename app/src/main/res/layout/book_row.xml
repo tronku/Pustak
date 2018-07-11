@@ -11,6 +11,7 @@
         android:layout_width="90dp"
         android:layout_height="130dp"
         android:id="@+id/book_thumbnail"
+        android:transitionName="thumbnail"
         android:layout_gravity="center_vertical"
         android:src="@drawable/img_load"/>
     
@@ -27,6 +28,7 @@
             android:textSize="22sp"
             android:text="Book Name"
             android:ellipsize="end"
+            android:transitionName="title"
             android:maxLines="1"
             android:id="@+id/book_name"
             android:textColor="@android:color/black"
@@ -37,6 +39,7 @@
             android:layout_height="wrap_content"
             android:textSize="14sp"
             android:text="Category"
+            android:transitionName="category"
             android:ellipsize="end"
             android:maxLines="1"
             android:id="@+id/category"/>
@@ -47,6 +50,7 @@
             android:textSize="12sp"
             android:layout_marginTop="1dp"
             android:text="Author Name"
+            android:transitionName="author"
             android:ellipsize="end"
             android:maxLines="1"
             android:id="@+id/author_name"/>

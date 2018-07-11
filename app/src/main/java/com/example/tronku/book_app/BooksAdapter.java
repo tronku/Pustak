@@ -1,8 +1,11 @@
 package com.example.tronku.book_app;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.util.Pair;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -51,7 +54,10 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.BooksViewHol
                 details.putExtra("pubDate", booksList.get(viewHolder.getAdapterPosition()).getPubDate());
                 details.putExtra("description", booksList.get(viewHolder.getAdapterPosition()).getDescription());
                 details.putExtra("thumbnail", booksList.get(viewHolder.getAdapterPosition()).getImgUrl());
-                context.startActivity(details);
+                Pair<View, String> pair1 = Pair.create((View)viewHolder.thumbnail, "thumbnail");
+                Pair<View, String> pair2 = Pair.create((View)viewHolder.title, "title");
+                ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation((Activity)context, pair1, pair2);
+                context.startActivity(details, optionsCompat.toBundle());
             }
         });
         return viewHolder;
